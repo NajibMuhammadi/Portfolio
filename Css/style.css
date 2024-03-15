@@ -8,68 +8,33 @@
 }
 
 :root {
-    --space-0: 0px;
-    --space-2: 2px;
     --space-4: 4px;
     --space-8: 8px;
-    --space-12: 12px;
-    --space-16: 16px;
-    --space-24: 24px;
-    --space-32: 32px;
-    --space-40: 40px;
-    --space-48: 48px;
-    --space-64: 64px;
-    --space-80: 80px;
-    --space-128: 128px;
-    --space-256: 256px;
-    --border-radius-0: 0px;
-    --border-radius-1: 1px;
-    --border-radius-2: 2px;
-    --border-radius-4: 4px;
     --border-radius-8: 8px;
-    --border-radius-12: 12px;
-    --border-radius-16: 16px;
-    --border-radius-full: 50%;
-    --font-family-default: "Open Sans", sans-serif;
-    --font-family-ui: "Nunito Sans", sans-serif;
-    --font-family-code: Monaco, sans-serif;
-    --font-weight-regular: 400;
-    --font-weight-medium: 500;
-    --font-weight-bold: 700;
-    --font-size-small: 12px;
     --font-size-default: 14px;
+    --font-size-small: 12px;
+    --font-size-header-big: 56px;
     --font-size-subhead-default: 20px;
     --font-size-subhead-big: 24px;
-    --font-size-header-default: 48px;
-    --font-size-header-big: 56px;
-    --line-height-small: 1.5;
+    --font-family-default: "Open Sans", sans-serif;
+    --font-family-ui: "Nunito Sans", sans-serif;
+    --font-weight-medium: 500;
     --line-height-default: 1.6;
-    --line-height-subhead-default: 1.375;
     --line-height-subhead-big: 1.2;
-    --line-height-header-default: 1;
-    --line-height-header-big: 1;
-    --background-depth: #0c1626;
     --background-root: #121f33;
     --background-default: #14243c;
     --background-higher: #162f4b;
-    --background-highest: #213f61;
     --subground-root: #293547;
     --subground-default: #334252;
-    --subground-higher: #3d4d5d;
     --subground-highest: #485968;
-    --linear-root: #b4c6db;
     --linear-default: #bfd2e7;
-    --linear-higher: #c7daed;
-    --linear-highest: #d2e1f2;
     --foreground-dimmest: #8090a0;
     --foreground-dimmer: #b8c5d1;
     --foreground-default: #f4faff;
     --accent-primary-dimmest: #2d7b7455;
     --accent-primary-dimmer: #45988477;
-    --accent-primary-default: #61b88e99;
     --accent-primary-stronger: #8dc8baaa;
     --accent-primary-strongest: #a7d4bccc;
-    --max-body-width: 1000px;
 }
 
 body {
@@ -155,7 +120,6 @@ body {
 }
 
 .header__nav-link {
-    font-size: 2rem;
     color: var(--foreground-defaults);
     font-size: var(--font-family-default);
     letter-spacing: 3px;
@@ -175,7 +139,7 @@ body {
 .header__nav-link:hover,
 .main__container-link:hover {
     transform: translateY(-5px);
-    color: #FF004F;
+    color: var(--accent-primary-strongest)
 }
 
 .main {
@@ -201,27 +165,9 @@ body {
     }
 }
 
-.main__img {
-    animation: SlideInRight 1.3s ease-in-out;
-}
-
-@keyframes SlideInRight {
-    0% {
-        transform: translateX(200%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
 .main__content {
     width: 50%;
     margin: 3rem auto;
-}
-
-.main__img {
-    width: 100%;
 }
 
 .main__background {
@@ -260,38 +206,6 @@ body {
     z-index: 5;
 }
 
-.project {
-    background: var(--background-default);
-    padding-bottom: 3rem;
-
-}
-
-.project__background {
-    min-height: 100px;
-    width: 100vw;
-    clip-path: polygon(0 0, 100% 100%, 100% 0);
-    position: relative;
-    background: var(--background-root);
-    z-index: 5;
-}
-
-.project__info {
-    width: 80%;
-    margin: 0 auto;
-}
-
-
-.project__text-container {
-    margin: 1rem 0;
-}
-
-.project__title {
-    padding-bottom: 1rem;
-    font-size: var(--font-size-subhead-big);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--line-height-subhead-big);
-    font-family: var(--font-family-ui);
-}
 
 .project__text,
 .project__subtitle,
@@ -331,7 +245,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    row-gap: 7rem;
+    row-gap: 5rem;
 }
 
 .project__img-container {
@@ -366,6 +280,12 @@ body {
     margin-bottom: 0;
 }
 
+.info__btn-link {
+    text-decoration: none;
+    color: var(--accent-primary-strongest);
+}
+
+
 .main__content-title {
     animation: typing1 4s linear 1.6s infinite;
     background: -webkit-linear-gradient(135deg, var(--accent-primary-dimmer), var(--accent-primary-stronger));
@@ -390,8 +310,9 @@ body {
     line-height: 1;
     letter-spacing: 3px;
     display: block;
-    animation: typing1 4s linear 3s infinite;
+    animation: typing1 4s linear 3.4s infinite;
     width: 100%;
+    padding-bottom: 1rem;
 }
 
 .main__content-title,
@@ -413,6 +334,7 @@ body {
     font-size: var(--font-size-subhead-default);
     line-height: var(--line-height-default);
     color: var(--foreground-dimmer);
+    padding-bottom: 1rem;
 }
 
 .about {
@@ -438,10 +360,16 @@ body {
 @keyframes slideImg {
     0% {
         transform: translateX(-150%);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: .5;
     }
 
     40% {
         transform: translateX(0);
+        opacity: 1;
     }
 
     100% {
@@ -490,6 +418,10 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.about__me-info {
+    font-size: var(--font-size-subhead-default);
 }
 
 .about__me-btn:hover {
@@ -574,6 +506,50 @@ body {
         transform: translate(calc(-50% - 0.5rem));
     }
 }
+
+.project {
+    background: var(--background-default);
+    padding-bottom: 3rem;
+
+}
+
+.project__background {
+    min-height: 100px;
+    width: 100vw;
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    position: relative;
+    background: var(--background-root);
+    z-index: 5;
+}
+
+.project__info {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.project__text-container {
+    margin: 1rem 0;
+}
+
+.project__title {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-subhead-big);
+    font-family: var(--font-family-ui);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (min-width: 1200px) {
 
@@ -695,8 +671,8 @@ body {
         padding-bottom: 6rem;
     }
 
-    .project__img:last-child {
-        display: none;
+    .project__info-container:last-child {
+        padding-bottom: 0;
     }
 
     .project__info {
