@@ -568,6 +568,7 @@ body {
 
     .header__logo-link {
         font-size: 2rem;
+        padding-left: 1rem;
     }
 
     .header__label {
@@ -579,6 +580,7 @@ body {
     .material-icons {
         font-size: 34px;
         color: var(--accent-primary-stronger);
+        padding-right: 1rem;
     }
 
     .header__switch:checked~.header__nav {
@@ -613,10 +615,6 @@ body {
 
     .main {
         padding-top: 5rem;
-    }
-
-    .main__content {
-        width: 100%;
     }
 
     .main__img {
@@ -661,6 +659,10 @@ body {
         width: 45px;
     }
 
+    .project {
+        padding-bottom: 0;
+    }
+
     .project__container {
         grid-template-columns: 1fr;
         row-gap: 1rem;
@@ -668,15 +670,18 @@ body {
 
     .project__info-container {
         grid-column: auto;
-        padding-bottom: 6rem;
+        padding-bottom: 4rem;
     }
 
     .project__info-container:last-child {
         padding-bottom: 0;
     }
 
-    .project__info {
+    .project__info,
+    .scroller,
+    .main__content {
         width: 95%;
+        margin: 0 auto;
     }
 
 
