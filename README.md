@@ -1,5 +1,5 @@
 # Portfolio
-### _[Portfolio Preview](https://najibmuhammadi.github.io/Portfolio/Html/index.html)._
+### _En förhandsgranskning är tillgänglig på: [Portfolio Preview](https://najibmuhammadi.github.io/Portfolio/Html/index.html)._
 
 ### 2024-03-22_
   _Det är även optimerat för responsivt användande, och kontaktformuläret fungerar korrekt. Om du väljer att skicka något kommer jag att ta emot det._
